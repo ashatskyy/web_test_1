@@ -1,16 +1,20 @@
 body{
 	margin: 0;
 	background-color: darkmagenta;
-	height: 100vh;
+	/* height: 100vh;
 	box-sizing: border-box;
-	overflow: hidden;
+	overflow: hidden; */
 }
 
 .box{
+	box-sizing: border-box;
 	padding: 35px;
 	background-color: #fff;
-	margin: 15% auto;
-	width: 40%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
 	font-size: 27px;
 	color: darkmagenta;
 	border-radius: 3px;
