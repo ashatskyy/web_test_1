@@ -1,9 +1,13 @@
 body{
 	margin: 0;
 	background-color: darkmagenta;
-	/* height: 100vh;
-	box-sizing: border-box;
-	overflow: hidden; */
+	font-size: 27px;
+}
+
+@media (max-width: 768px) {
+	body {
+		font-size: 18px;
+  }
 }
 
 .box{
@@ -15,13 +19,11 @@ body{
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 80%;
-	font-size: 27px;
 	color: darkmagenta;
 	border-radius: 3px;
 }
 
 .qt{
-	box-sizing: border-box;
 	text-align: justify;
 }
 .cap{
