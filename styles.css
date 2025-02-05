@@ -114,3 +114,7 @@ body {
 .buff{
 	height: 25px;
 }
+
+.x, .b, .long{
+	cursor: pointer;
+}
