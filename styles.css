@@ -90,19 +90,28 @@ body{
 	font-size: 30px;
 }
 
-.twitter-share-button{
+button{
+	width: 40px;
+	height: 40px;
 	box-sizing: border-box;
+	color: #fff;
+	border: 0;
+	background-color: darkmagenta;
+	font-size: 34px;
+	border-radius: 3px;
+}
+/* 
+.twitter-share-button{
 	
 	font-size: 32px;
 	text-decoration: none;
   background-color: darkmagenta;
-	color: #fff;
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 3px;
 }
 .bluesky-share-button{
-	box-sizing: border-box;
+
 
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 32px;
@@ -114,4 +123,4 @@ body{
 	padding-bottom: 3px;
 	padding-right: 10px;
 	border-radius: 3px;
-}
+} */
