@@ -80,13 +80,17 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+	box-sizing: border-box;
+	padding-top: 20px;
+	/* padding-bottom: 20px; */
+	height: 50px;
 }
 
 .small {
   font-size: 18px;
   border-radius: 3px;
   width: 33px;
-  line-height: 28px;
+  line-height: 27.9px;
   background-color: darkmagenta;
   color: #fff;
   border: 0;
@@ -96,8 +100,8 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 .b {
-  line-height: 29px;
-  vertical-align: -0.1px;
+  line-height: 28.1px;
+  vertical-align: -0.4px;
 }
 
 .long {
@@ -107,5 +111,7 @@ body {
   color: #fff;
   font-size: 12px;
   border-radius: 3px;
-  line-height: 0px;
+}
+.buff{
+	height: 25px;
 }
