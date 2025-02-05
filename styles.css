@@ -75,61 +75,18 @@ body{
   }
 }
 
-.logo-1{
-	font-size: 30px;
+
+.long{
+font-size: 3px;
+line-height: 15px;
+vertical-align: 3.4px
 }
-
-.logo-2{
-	font-family:  Arial, Helvetica, sans-serif;
-
-	font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  /* font-variation-settings:
-    "wdth" 1500; */
-	font-size: 30px;
+/* .small{
+	font-size: 40px;
+	padding-top: 0;
+	line-height: 30px;
 }
-
-button{
-	font-family: Arial, Helvetica, sans-serif;
-	width: 40px;
+.big{
 	height: 40px;
-	box-sizing: border-box;
-	color: #fff;
-	border: 0;
-	background-color: darkmagenta;
-	font-size: 34px;
-	border-radius: 3px;
-}
-.x{
-	font-family: 'Times New Roman', Times, serif;
-}
-/* 
-.twitter-share-button{
-	
-	font-size: 32px;
-	text-decoration: none;
-  background-color: darkmagenta;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 3px;
-}
-.bluesky-share-button{
-
-
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 32px;
-	text-decoration: none;
-  background-color: darkmagenta;
-	color: #fff;
-	padding-left: 10px;
-	padding-top: 3.5px;
-	padding-bottom: 3px;
-	padding-right: 10px;
-	border-radius: 3px;
-} */
-
-/* .buttons{
-	height: 41px;
-	box-sizing: border-box;
+	font-size: 40px;
 } */
