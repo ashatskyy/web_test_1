@@ -1,54 +1,55 @@
-body{
-	margin: 0;
-	background-color: darkmagenta;
-	font-family: 'EB Garamond', serif;
+body {
+  margin: 0;
+  background-color: darkmagenta;
+  font-family: "EB Garamond", serif;
 }
 
-.box{
-	box-sizing: border-box;
+.box {
+  box-sizing: border-box;
 
-	padding: 1.3em;
-	padding-left: 3.9em;
-	padding-right: 3.9em; 
-	line-height: 2.7em;
+  padding-top: 1.3em;
+  padding-left: 3.9em;
+  padding-right: 3.9em;
+  line-height: 2.7em;
 
-	background-color: #fff;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 80%;
-	color: darkmagenta;
-	border-radius: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  color: darkmagenta;
+  border-radius: 3px;
 }
 
 @media (max-width: 1199px) {
-	.box {
-		padding: 1.04em;
-		padding-left: 3.12em;
-		padding-right: 3.12em; 
-		line-height: 2.16em;
-	}
-}
-
-@media (max-width: 768px) {
-	.box {
-		padding: 0.86em;
-		padding-left: 2.6em;
-		padding-right: 2.6em; 
-		line-height: 1.8em;
+  .box {
+    padding: 1.04em;
+    padding-left: 3.12em;
+    padding-right: 3.12em;
+    line-height: 2.16em;
   }
 }
 
-.qt{
-	text-align: justify;
-	font-size: 34px;
+@media (max-width: 768px) {
+  .box {
+    padding: 0.86em;
+    padding-left: 2.6em;
+    padding-right: 2.6em;
+    line-height: 1.8em;
+  }
+}
+
+.qt {
+  text-align: justify;
+  font-size: 34px;
+	/* margin: 0; */
 }
 
 @media (max-width: 1199px) {
 	.qt {
 		font-size: 27px;
-	}
+  }
 }
 
 @media (max-width: 768px) {
@@ -57,26 +58,54 @@ body{
   }
 }
 
-.cap{
+.cap {
 	line-height: 1em;
-	text-align: right;
-	font-size: 24.2px;
+  text-align: right;
+  font-size: 24.2px;
 }
 
 @media (max-width: 1199px) {
-	.cap {
-		font-size: 19.4px;
-	}
-}
-
-@media (max-width: 768px) {
-	.cap {
-		font-size: 16.2px;
+  .cap {
+    font-size: 19.4px;
   }
 }
 
-.long{
-font-size: 3px;
-line-height: 15px;
-vertical-align: 3.4px
+@media (max-width: 768px) {
+  .cap {
+    font-size: 16.2px;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.small {
+  font-size: 18px;
+  border-radius: 3px;
+  width: 33px;
+  line-height: 28px;
+  background-color: darkmagenta;
+  color: #fff;
+  border: 0;
+}
+
+.x {
+  font-family: "Times New Roman", Times, serif;
+}
+.b {
+  line-height: 29px;
+  vertical-align: -0.1px;
+}
+
+.long {
+  width: 85px;
+  border: 0;
+  background-color: darkmagenta;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  line-height: 0px;
 }
