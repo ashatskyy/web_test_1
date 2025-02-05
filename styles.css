@@ -43,7 +43,6 @@ body {
 .qt {
   text-align: justify;
   font-size: 34px;
-	/* margin: 0; */
 }
 
 @media (max-width: 1199px) {
@@ -82,7 +81,6 @@ body {
   justify-content: space-between;
 	box-sizing: border-box;
 	padding-top: 20px;
-	/* padding-bottom: 20px; */
 	height: 50px;
 }
 
@@ -98,6 +96,7 @@ body {
 
 .x {
   font-family: "Times New Roman", Times, serif;
+	margin-right: 1px;
 }
 .b {
   line-height: 28.1px;
