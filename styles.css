@@ -103,8 +103,8 @@ body {
 }
 
 .b {
-  line-height: 37.5px;
-  vertical-align: -0.4px;
+  line-height: 36.9px;
+  vertical-align: -0.6px;
 }
 
 .long {
@@ -115,6 +115,29 @@ body {
   font-size: 20px;
   border-radius: 3px;
 }
+
+
+@media (max-width: 450px) {
+	.buttons-container {
+		height: 50px;
+	}
+	.small {
+		font-size: 19.6px;
+		width: 31.1px;
+		line-height: 25.9px;
+}
+.b {
+  line-height: 26.65px;
+  vertical-align: -0.4px;
+}
+.long {
+  width: 105px;
+  font-size: 14px;
+}
+
+}
+
+
 
 .buff{
 	height: 50px;
