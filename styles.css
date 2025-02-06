@@ -1,6 +1,3 @@
-/* html{
-	--main-theme-color: darkmagenta;
-} */
 body {
   margin: 0;
   background-color: var(--main-theme-color);
@@ -91,21 +88,20 @@ body {
   font-size: 28px;
   border-radius: 3px;
   width: 43px;
-  line-height: 37px;
+  line-height: 37.26px;
   background-color:var(--main-theme-color);
   color: #fff;
   border: 0;
 }
 
+.b {
+	line-height: 36.9px;
+	vertical-align: -0.7px;
+}
 .x {
-  font-family: "Times New Roman", Times, serif;
-	margin-right: 1px;
+	font-family: "Times New Roman", Times, serif;
 }
 
-.b {
-  line-height: 36.9px;
-  vertical-align: -0.6px;
-}
 
 .long {
   width: 150px;
@@ -148,38 +144,3 @@ body {
 	cursor: pointer;
 }
 
-/* 
-
-h1{
-	color: #BF3E97;
-	color: #057fab;
-	color: #18AF50;
-	color: #0A7375;
-	color: #9C719D;
-	color: #FA602A;
-	color: #ce14b9;
-	color: #cf115a;
-	color: #53266E;
-	color: #316232;
-	color: #404593;
-	color: #7D71D6;
-	color: #f04242f9;
-	color: #077345;
-	color: #E67614;
-	color: #3103D1;
-	color: #aa1b48;
-	color: #e42416;
-	color: #B42C40;
-	color: #0c56ea;
-	color: #2B60C8;
-	color: #2D8705;
-	color: darkmagenta;
-	color: #0d7555;
-	color: #1a4264;
-	color: #3F67CC;
-	color: #68625c;
-	color: #3E82B2;
-	color: #2D920F;
-	color: #6A0EAF;
-	
-}  */

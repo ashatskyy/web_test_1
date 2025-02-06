@@ -66,45 +66,54 @@ const colors = [
 	'#6A0EAF'
 
 ]
-// const colors = [
-//   "#FF4500", "#8B0000", "#FF1493", "#800080", "#4B0082",
-//   "#00008B", "#4169E1", "#008080", "#228B22", "#006400",
-//   "#32CD32", "#808000", "#8B4513", "#A0522D", "#D2691E",
-//   "#FF8C00", "#FFD700", "#B8860B", "#FF6347", "#DC143C",
-//   "#9400D3", "#9932CC", "#483D8B", "#2F4F4F", "#708090",
-//   "#556B2F", "#C71585", "#4682B4", "#5F9EA0"
-// ];
+
 
 const twttrBttn = document.getElementById("twttr-bttn");
 const blueskyBttn = document.getElementById("bluesky-bttn");
-// const d =
-//   "Just one small positive thought in the morning can change your whole day.";
-// a.href = `https://twitter.com/intent/tweet?text=${d}`;
+const nwQt = document.getElementById("new-quote");
 
 
 const qt = document.getElementById("qt");
 const cap = document.getElementById("cap");
 
+const root_theme = document.querySelector(':root');
+
+
+root_theme.style.setProperty('--main-theme-color', `#8B008B`);
+
+
+
+qt.innerText = `"` + arrQ[0][0] + `"`;
+cap.innerText = arrQ[0][1];
+
+// const d =
+//   "Just one small positive thought in the morning can change your whole day.";
+// a.href = `https://twitter.com/intent/tweet?text=${d}`;
+
+
+nwQt.addEventListener('click', () => { onClickFn() });
+
+
+function onClickFn() {
+	
 
 const quteAndColor = generateQuoteAndColor();
-console.log(quteAndColor);
-console.log(colors[quteAndColor[1]]);
 
-const root_theme = document.querySelector(':root');
-root_theme.style.setProperty('--main-theme-color', `${colors[quteAndColor[1]]}`); 
+root_theme.style.setProperty('--main-theme-color', `${colors[quteAndColor[1]]}`);
 
-
-
-qt.innerText = arrQ[quteAndColor[0]][0];
+qt.innerText = `"` + arrQ[quteAndColor[0]][0] + `"`;
 cap.innerText = arrQ[quteAndColor[0]][1];
 
-function generateQuoteAndColor() { 
-	const min = 0;
-	const max = 28;
-	const quoteNumber = Math.round(getRandomNumber(min, max));
-	const colorNumber = Math.round(getRandomNumber(min, max));
-	function getRandomNumber(min, max) {
-    return min + (Math.random() * (max - min));
+
+
+	function generateQuoteAndColor() {
+		const min = 0;
+		const max = 28;
+		const quoteNumber = Math.round(getRandomNumber(min, max));
+		const colorNumber = Math.round(getRandomNumber(min, max));
+		function getRandomNumber(min, max) {
+			return min + (Math.random() * (max - min));
+		}
+		return [quoteNumber, colorNumber]
 	}
-	return [quoteNumber,colorNumber]
 }
