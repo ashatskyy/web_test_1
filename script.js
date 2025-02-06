@@ -36,7 +36,7 @@ const arrQ = [
 const colors = [
 
 	'#BF3E97',
-	'#07AAE6',
+	'#057fAb',
 	'#18AF50',
 	'#0A7375',
 	'#FA602A',
