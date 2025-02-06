@@ -1,5 +1,6 @@
 "use strict";
 const arrQ = [
+
 	['Learn as if you will live forever, live like you will die tomorrow.', '—Mahatma Gandhi'],
 	['Stay away from those people who try to disparage your ambitions. Small minds will always do that, but great minds will give you a feeling that you can become great too.', '—Mark Twain'],
 	['When you give joy to other people, you get more joy in return. You should give a good thought to the happiness that you can give out.', '—Eleanor Roosevelt'],
@@ -29,10 +30,81 @@ const arrQ = [
 	['If it makes you nervous, you’re doing it right.', '—Childish Gambino'],
 	['I choose to make the rest of my life the best of my life.', '—Louise Hay'],
 	['No one changes the world who isn’t obsessed.', '—Billie Jean King']
+
 ]
 
-console.log(arrQ.length);
-const a = document.getElementById("twttr-bttn");
-const d =
-  "Just one small positive thought in the morning can change your whole day.";
-a.href = `https://twitter.com/intent/tweet?text=${d}`;
+const colors = [
+
+	'#BF3E97',
+	'#07AAE6',
+	'#18AF50',
+	'#0A7375',
+	'#FA602A',
+	'#CE14B9',
+	'#Cf115A',
+	'#53266E',
+	'#316232',
+	'#404593',
+	'#7D71D6',
+	'#F04242F9',
+	'#077345',
+	'#E67614',
+	'#3103D1',
+	'#AA1B48',
+	'#E42416',
+	'#B42C40',
+	'#0C56EA',
+	'#2B60C8',
+	'#2D8705',
+	'#EFB01D',
+	'#0D7555',
+	'#1A4264',
+	'#3F67CC',
+	'#68625c',
+	'#3E82B2',
+	'#2D920F',
+	'#6A0EAF'
+
+]
+// const colors = [
+//   "#FF4500", "#8B0000", "#FF1493", "#800080", "#4B0082",
+//   "#00008B", "#4169E1", "#008080", "#228B22", "#006400",
+//   "#32CD32", "#808000", "#8B4513", "#A0522D", "#D2691E",
+//   "#FF8C00", "#FFD700", "#B8860B", "#FF6347", "#DC143C",
+//   "#9400D3", "#9932CC", "#483D8B", "#2F4F4F", "#708090",
+//   "#556B2F", "#C71585", "#4682B4", "#5F9EA0"
+// ];
+
+const twttrBttn = document.getElementById("twttr-bttn");
+const blueskyBttn = document.getElementById("bluesky-bttn");
+// const d =
+//   "Just one small positive thought in the morning can change your whole day.";
+// a.href = `https://twitter.com/intent/tweet?text=${d}`;
+
+
+const qt = document.getElementById("qt");
+const cap = document.getElementById("cap");
+
+
+const quteAndColor = generateQuoteAndColor();
+console.log(quteAndColor);
+console.log(colors[quteAndColor[1]]);
+
+const root_theme = document.querySelector(':root');
+root_theme.style.setProperty('--main-theme-color', `${colors[quteAndColor[1]]}`); 
+
+
+
+qt.innerText = arrQ[quteAndColor[0]][0];
+cap.innerText = arrQ[quteAndColor[0]][1];
+
+function generateQuoteAndColor() { 
+	const min = 0;
+	const max = 28;
+	const quoteNumber = Math.round(getRandomNumber(min, max));
+	const colorNumber = Math.round(getRandomNumber(min, max));
+	function getRandomNumber(min, max) {
+    return min + (Math.random() * (max - min));
+	}
+	return [quoteNumber,colorNumber]
+}
