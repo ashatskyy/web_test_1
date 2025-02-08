@@ -2,6 +2,7 @@ body {
   margin: 0;
   background-color: var(--main-theme-color);
   font-family: "EB Garamond", serif;
+  transition-duration: 2s;
 }
 
 .box {
@@ -18,7 +19,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  color: var(--main-theme-color);
+
   border-radius: 3px;
 }
 
@@ -43,24 +44,29 @@ body {
 .qt {
   text-align: justify;
   font-size: 34px;
+  color: var(--color);
+
+  transition-duration: 1s;
 }
 
 @media (max-width: 1199px) {
-	.qt {
-		font-size: 27px;
+  .qt {
+    font-size: 27px;
   }
 }
 
 @media (max-width: 768px) {
-	.qt {
-		font-size: 22px;
+  .qt {
+    font-size: 22px;
   }
 }
 
 .cap {
-	line-height: 1em;
+  line-height: 1em;
   text-align: right;
   font-size: 24.2px;
+  color: var(--color);
+  transition-duration: 1s;
 }
 
 @media (max-width: 1199px) {
@@ -79,68 +85,73 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-	box-sizing: border-box;
-	padding-top: 20px;
-	height: 60px;
+  box-sizing: border-box;
+  padding-top: 20px;
+  height: 60px;
 }
 
 .small {
   font-size: 28px;
   border-radius: 3px;
   width: 43px;
-  line-height: 37.26px;
-  background-color:var(--main-theme-color);
+  background-color: var(--main-theme-color);
+	transition: background-color 2s;
   color: #fff;
   border: 0;
 }
 
 .b {
-	line-height: 36.9px;
-	vertical-align: -0.7px;
+  line-height: 36.9px;
+  vertical-align: -0.7px;
 }
 .x {
-	font-family: "Times New Roman", Times, serif;
+  line-height: 37.26px;
+  font-family: "Times New Roman", Times, serif;
 }
-
 
 .long {
   width: 150px;
   border: 0;
   background-color: var(--main-theme-color);
+  /* transition-duration: 2s; */
+  transition: background-color 2s;
   color: #fff;
   font-size: 20px;
   border-radius: 3px;
 }
 
+.long:hover, .small:hover {
+  transition: background-color 0.5s, filter 0.5s;
+  background-color: var(--hover-color);
+  filter: brightness(1.2);
+}
 
 @media (max-width: 450px) {
-	.buttons-container {
-		height: 49.1px;
-	}
-	.small {
-		font-size: 19.6px;
-		width: 31.1px;
-		line-height: 26.8px;
-		vertical-align: -0.4px;
+  .buttons-container {
+    height: 49.1px;
+  }
+  .small {
+    font-size: 19.6px;
+    width: 31.1px;
+    line-height: 26.8px;
+    vertical-align: -0.4px;
+  }
+  .b {
+    line-height: 26.65px;
+    vertical-align: -0.4px;
+  }
+  .long {
+    width: 105px;
+    font-size: 14px;
+  }
 }
-.b {
-  line-height: 26.65px;
-  vertical-align: -0.4px;
+
+.buff {
+  height: 38px;
 }
+
+.x,
+.b,
 .long {
-  width: 105px;
-  font-size: 14px;
+  cursor: pointer;
 }
-
-}
-
-
-
-.buff{
-	height: 38px;
-}
-
-.x, .b, .long{
-	cursor: pointer;
-}
-
