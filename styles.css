@@ -113,17 +113,18 @@ body {
   width: 150px;
   border: 0;
   background-color: var(--main-theme-color);
-  /* transition-duration: 2s; */
   transition: background-color 2s;
   color: #fff;
   font-size: 20px;
   border-radius: 3px;
 }
 
-.long:hover, .small:hover {
-  transition: background-color 0.5s, filter 0.5s;
-  background-color: var(--hover-color);
-  filter: brightness(1.15);
+@media(min-width: 1200px){
+	.long:hover, .small:hover {
+		transition: background-color 0.5s, filter 0.5s;
+		background-color: var(--hover-color);
+		filter: brightness(1.15);
+	}
 }
 
 @media (max-width: 450px) {
