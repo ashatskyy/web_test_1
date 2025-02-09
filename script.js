@@ -112,70 +112,64 @@ const colors = [
   "#6A0EAF",
 ];
 
-const blueskyBttn = document.getElementById("bluesky-bttn");
-const twttrBttn = document.getElementById("twttr-bttn");
-const nwQt = document.getElementById("new-quote");
+const blueQuote = document.getElementById("bluesky-quote");
+const twtQuote = document.getElementById("tweet-quote");
+const newQuote = document.getElementById("new-quote");
 
-const qt = document.getElementById("qt");
-const cap = document.getElementById("cap");
+const text = document.getElementById("text");
+const author = document.getElementById("author");
 
 const root_theme = document.querySelector(":root");
 
-root_theme.style.setProperty("--main-theme-color", `#8B008B`);
-root_theme.style.setProperty("--hover-color", `#8B008B`);
-root_theme.style.setProperty("--color", `#8B008B`);
+let rendomParam = generateQuoteAndColor();
+onClickFn([rendomParam[0],rendomParam[1]]);
 
-const firstMsg = `"` + arrQ[0][0] + `"`;
-const firstMsgAutor = arrQ[0][1];
-
-qt.innerText = firstMsg;
-cap.innerText = firstMsgAutor;
-
-blueskyBttn.href = `https://bsky.app/intent/compose?text=${firstMsg+firstMsgAutor}`;
-twttrBttn.href = `https://twitter.com/intent/tweet?text=${firstMsg+firstMsgAutor}`;
-
-
-nwQt.addEventListener("click", () => {
-  onClickFn();
+newQuote.addEventListener("click", () => {
+	checkRendom();
 });
 
-function onClickFn() {
-  const quteAndColor = generateQuoteAndColor();
+function onClickFn(quteAndColor) {
 
-	const color = colors[quteAndColor[1]];
-	const msg = `"` + arrQ[quteAndColor[0]][0] + `"`;
+  const color = colors[quteAndColor[1]];
+  const msg = `"` + arrQ[quteAndColor[0]][0] + `"`;
   const msgAutor = arrQ[quteAndColor[0]][1];
-
 
   root_theme.style.setProperty("--main-theme-color", `${color}`);
 
-	setTimeout(() => { 
-		root_theme.style.setProperty("--hover-color", `${color}`);
-	},350)
+  setTimeout(() => {
+    root_theme.style.setProperty("--hover-color", `${color}`);
+  }, 350);
 
   root_theme.style.setProperty("--color", "#FFFFFF");
 
   setTimeout(() => {
     root_theme.style.setProperty("--color", `${color}`);
-    qt.innerText = msg;
-    cap.innerText = msgAutor;
-	}, 1000);
-	
-	
-	
-	blueskyBttn.href = `https://bsky.app/intent/compose?text=${msg + msgAutor}`;
-	twttrBttn.href = `https://twitter.com/intent/tweet?text=${msg + msgAutor}`;
-	
-  function generateQuoteAndColor() {
-    const min = 0;
-    const max = 28;
-    const quoteNumber = Math.round(getRandomNumber(min, max));
-    const colorNumber = Math.round(getRandomNumber(min, max));
+    text.innerText = msg;
+    author.innerText = msgAutor;
+  }, 1000);
 
-    function getRandomNumber(min, max) {
-      return min + Math.random() * (max - min);
-    }
+  blueQuote.href = `https://bsky.app/intent/compose?text=${msg + msgAutor}`;
+	twtQuote.href = `https://twitter.com/intent/tweet?text=${msg + msgAutor}`;
+}
 
-    return [quoteNumber, colorNumber];
+function generateQuoteAndColor() {
+  const min = 0;
+  const max = 28;
+  const quoteNumber = Math.round(getRandomNumber(min, max));
+  const colorNumber = Math.round(getRandomNumber(min, max));
+
+  function getRandomNumber(min, max) {
+    return min + Math.random() * (max - min);
   }
+
+  return [quoteNumber, colorNumber];
+}
+
+function checkRendom(){ 
+  const rendomParamNew = generateQuoteAndColor();
+	if (rendomParamNew[0] !== rendomParam[0] && rendomParamNew[1] !== rendomParam[1]) {
+		onClickFn([rendomParamNew[0], rendomParamNew[1]]);
+		rendomParam= [rendomParamNew[0],rendomParamNew[1]]
+		return;
+	} else {checkRendom()}
 }
